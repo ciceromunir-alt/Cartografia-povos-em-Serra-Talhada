@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartografia & Diagnóstico - Comunidades Tradicionais</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Cartografia Social & Diagnósticos</h1>
+    <p>Comunidades Tradicionais de Serra Talhada - PE</p>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#comunidades">Comunidades</a>
+    <a href="#diagnosticos">Diagnósticos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <main class="container">
+    <section id="sobre" class="card">
+      <h2>Sobre o Projeto</h2>
+      <p>Este projeto tem como objetivo realizar o mapeamento participativo, a identificação territorial e o diagnóstico socioeconômico e cultural das comunidades tradicionais (quilombolas, indígenas, ribeirinhas e agricultores familiares) do município de Serra Talhada.</p>
+    </section>
+
+    <section id="comunidades" class="card">
+      <h2>Comunidades Mapeadas</h2>
+      <input type="text" id="searchInput" placeholder="Buscar comunidade por nome ou tipo..." onkeyup="filtrarComunidades()">
+      
+      <ul id="listaComunidades" class="lista">
+        <li class="item-comunidade" data-tipo="Quilombola">
+          <strong>Comunidade Quilombola dos Luízes</strong>
+          <span class="tag">Quilombola</span>
+          <p>Localização: Zona Rural de Serra Talhada</p>
+        </li>
+        <li class="item-comunidade" data-tipo="Indígena">
+          <strong>Comunidade Indígena Pankará</strong>
+          <span class="tag">Indígena</span>
+          <p>Localização: Região Serrana</p>
+        </li>
+        <li class="item-comunidade" data-tipo="Terreiro">
+          <strong>Comunidade de Terreiro Ilê Asé</strong>
+          <span class="tag">Matriz Africana</span>
+          <p>Localização: Área Urbana/Periférica</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="diagnosticos" class="card">
+      <h2>Diagnósticos Socioambientais</h2>
+      <div class="grid-diagnosticos">
+        <div class="diag-box">
+          <h3>Sustentabilidade & Acesso à Água</h3>
+          <p>Levantamento dos recursos hídricos, cisternas e tecnologias sociais de convivência com o Semiárido.</p>
+        </div>
+        <div class="diag-box">
+          <h3>Patrimônio Cultural</h3>
+          <p>Registro das tradições orais, festejos, saberes medicinais e manifestações culturais locais.</p>
+        </div>
+        <div class="diag-box">
+          <h3>Regularização Fundiária</h3>
+          <p>Acompanhamento da situação de posse, limites territoriais e direitos de uso da terra.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="card">
+      <h2>Cadastrar Novas Informações</h2>
+      <form id="formCadastro">
+        <label for="nome">Nome da Comunidade:</label>
+        <input type="text" id="nome" required>
+
+        <label for="tipo">Tipo de Comunidade:</label>
+        <select id="tipo" required>
+          <option value="">Selecione...</option>
+          <option value="Quilombola">Quilombola</option>
+          <option value="Indígena">Indígena</option>
+          <option value="Matriz Africana">Matriz Africana</option>
+          <option value="Agricultores Tradicionais">Agricultores Tradicionais</option>
+        </select>
+
+        <label for="descricao">Resumo / Diagnóstico Inicial:</label>
+        <textarea id="descricao" rows="4" required></textarea>
+
+        <button type="submit">Enviar Dados</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Mapeamento Territorial - Serra Talhada/PE. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
